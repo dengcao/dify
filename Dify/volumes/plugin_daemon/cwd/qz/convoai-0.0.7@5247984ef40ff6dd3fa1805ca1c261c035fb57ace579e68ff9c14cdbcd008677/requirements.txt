@@ -1,0 +1,3 @@
+dify_plugin==0.0.1b65
+agora-token-builder
+gevent~=24.2.1

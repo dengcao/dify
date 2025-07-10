@@ -1,0 +1,36 @@
+author: langgenius
+created_at: '2024-09-20T08:03:44.658609186Z'
+description:
+  en_US: Tools for processing JSON content using jsonpath_ng
+  pt_BR: Tools for processing JSON content using jsonpath_ng
+  zh_Hans: 利用 jsonpath_ng 处理 JSON 内容的工具
+icon: icon.svg
+label:
+  en_US: JSON Process
+  pt_BR: JSON Process
+  zh_Hans: JSON 处理
+meta:
+  arch:
+  - amd64
+  - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+name: json_process
+plugins:
+  tools:
+  - provider/json_process.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+- utilities
+type: plugin
+version: 0.0.2

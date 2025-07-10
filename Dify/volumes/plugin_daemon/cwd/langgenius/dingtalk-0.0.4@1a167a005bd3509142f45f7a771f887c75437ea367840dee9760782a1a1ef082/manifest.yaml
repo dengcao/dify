@@ -1,0 +1,37 @@
+author: langgenius
+created_at: "2024-09-20T08:03:44.658609186Z"
+description:
+  en_US: DingTalk group robot
+  pt_BR: DingTalk group robot
+  zh_Hans: 钉钉群机器人
+icon: icon.svg
+label:
+  en_US: DingTalk
+  pt_BR: DingTalk
+  zh_Hans: 钉钉
+meta:
+  arch:
+    - amd64
+    - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: "3.12"
+  version: 0.0.1
+name: dingtalk
+plugins:
+  tools:
+    - provider/dingtalk.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+  - social
+  - productivity
+type: plugin
+version: 0.0.4

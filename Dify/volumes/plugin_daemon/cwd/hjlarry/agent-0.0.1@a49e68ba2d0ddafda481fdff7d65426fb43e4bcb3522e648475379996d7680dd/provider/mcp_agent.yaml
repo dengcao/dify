@@ -1,0 +1,16 @@
+identity:
+  author: hjlarry
+  name: mcp_agent
+  label:
+    en_US: MCP Agent
+    zh_Hans: MCP Agent
+    pt_BR: MCP Agent
+  description:
+    en_US: The agent with MCP tool calls and common function calls.
+    zh_Hans: 支持 MCP 工具调用和 function call 的 Agent。
+  icon: icon.svg
+strategies:
+  - strategies/mcp_function_calling.yaml
+extra:
+  python:
+    source: provider/mcp_agent.py

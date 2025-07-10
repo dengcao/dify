@@ -1,0 +1,33 @@
+author: langgenius
+created_at: '2024-09-20T08:03:44.658609186Z'
+description:
+  en_US: GetImg API integration for image generation and scraping.
+icon: icon.svg
+label:
+  en_US: getimg.ai
+  zh_CN: getimg.ai
+meta:
+  arch:
+  - amd64
+  - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+name: getimgai
+plugins:
+  tools:
+  - provider/getimgai.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+- image
+type: plugin
+version: 0.0.2

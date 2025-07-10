@@ -1,0 +1,16 @@
+identity:
+  author: junjiem
+  name: mcp_see_agent
+  label:
+    en_US: Support MCP Tools Agent
+    zh_Hans: 支持 MCP 工具的 Agent
+  description:
+    en_US: Support MCP Tools Agent
+    zh_Hans: 支持 MCP 工具的 Agent
+  icon: icon.svg
+strategies:
+  - strategies/function_calling.yaml
+  - strategies/ReAct.yaml
+extra:
+  python:
+    source: provider/agent.py

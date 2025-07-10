@@ -1,0 +1,12 @@
+settings:
+  - name: tools
+    type: array[tools]
+    required: true
+    label:
+      en_US: Tool list
+      zh_Hans: 工具列表
+endpoints:
+  - endpoints/sse.yaml
+  - endpoints/messages.yaml
+  - endpoints/mcp_get.yaml
+  - endpoints/mcp_post.yaml

@@ -1,0 +1,37 @@
+author: langgenius
+created_at: "2024-09-20T08:03:44.658609186Z"
+description:
+  en_US: Discord Webhook
+  pt_BR: Discord Webhook
+  zh_Hans: Discord Webhook
+icon: icon.svg
+label:
+  en_US: Discord
+  pt_BR: Discord
+  zh_Hans: Discord
+meta:
+  arch:
+    - amd64
+    - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: "3.12"
+  version: 0.0.1
+name: discord
+plugins:
+  tools:
+    - provider/discord.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+  - social
+  - productivity
+type: plugin
+version: 0.0.2

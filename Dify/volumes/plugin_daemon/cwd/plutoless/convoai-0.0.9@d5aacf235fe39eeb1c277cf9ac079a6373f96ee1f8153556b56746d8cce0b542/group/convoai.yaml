@@ -1,0 +1,142 @@
+settings:
+  - name: app
+    type: app-selector
+    scope: chat
+    required: true
+    label:
+      en_US: App
+      zh_Hans: App
+      pt_BR: App
+  - name: agora_app_id
+    type: text-input
+    required: true
+    label:
+      en_US: Agora App ID
+      zh_Hans: Agora App ID
+      pt_BR: Agora App ID
+    placeholder:
+      en_US: App ID for your Agora project
+      zh_Hans: 你的 Agora 项目的 App ID
+      pt_BR: App ID for your Agora project
+  - name: agora_restful_customer_id
+    type: text-input
+    required: true
+    label:
+      en_US: Agora RESTful Customer ID
+      zh_Hans: Agora RESTful 鉴权 ID
+      pt_BR: Agora RESTful Customer ID
+    placeholder:
+      en_US: This value is used to authenticate your Agora RESTful API
+      zh_Hans: 这个值用于鉴权你的 Agora RESTful API
+      pt_BR: This value is used to authenticate your Agora RESTful API
+  - name: agora_restful_customer_secret
+    type: secret-input
+    required: true
+    label:
+      en_US: Agora RESTful Customer Secret
+      zh_Hans: Agora RESTful 鉴权 Secret
+      pt_BR: Agora RESTful Customer Secret
+    placeholder:
+      en_US: This value is used to authenticate your Agora RESTful API
+      zh_Hans: 这个值用于鉴权你的 Agora RESTful API
+      pt_BR: This value is used to authenticate your Agora RESTful API
+  - name: asr_language
+    type: select
+    required: true
+    label:
+      en_US: ASR Language
+      zh_Hans: ASR 语言
+      pt_BR: ASR Language
+    options:
+      - value: en-US
+        label:
+          en_US: English (US)
+          zh_Hans: 英语 (美国)
+          pt_BR: Inglês (EUA)
+      - value: zh-CN
+        label:
+          en_US: Chinese (Simplified)
+          zh_Hans: 中文 (简体)
+          pt_BR: Chinês (Simplificado)
+      - value: ja-JP
+        label:
+          en_US: Japanese
+          zh_Hans: 日语
+          pt_BR: Japonês
+  - name: tts_vendor
+    type: select
+    required: true
+    label:
+      en_US: TTS Vendor
+      zh_Hans: TTS 供应商
+      pt_BR: TTS tts_vendor
+    options:
+      - value: elevenlabs
+        label:
+          en_US: ElevenLabs
+          zh_Hans: ElevenLabs
+          pt_BR: ElevenLabs
+      - value: microsoft
+        label:
+          en_US: Azure
+          zh_Hans: Azure
+          pt_BR: Azure
+  - name: tts_params
+    type: text-input
+    required: true
+    label:
+      en_US: TTS Params
+      zh_Hans: TTS 参数
+      pt_BR: TTS Params
+    placeholder:
+      en_US: TTS Params in JSON format
+      zh_Hans: TTS 参数以 JSON 格式填写
+      pt_BR: TTS Params in JSON format
+  - name: greeting_message
+    type: text-input
+    required: false
+    label:
+      en_US: Greeting Message
+      zh_Hans: 欢迎语
+      pt_BR: Greeting Message
+    placeholder:
+      en_US: This message will be sent to the user when they first start the conversation
+      zh_Hans: 这个消息会在用户第一次开始对话时发送给用户
+      pt_BR: This message will be sent to the user when they first start the conversation
+  - name: failure_message
+    type: text-input
+    required: false
+    label:
+      en_US: Failure Message
+      zh_Hans: 错误信息
+      pt_BR: Failure Message
+    placeholder:
+      en_US: This message will be sent to the user when the conversation has error
+      zh_Hans: 这个消息会在对话出现错误时发送给用户
+      pt_BR: This message will be sent to the user when the conversation has error
+  - name: agora_app_cert
+    type: secret-input
+    required: false
+    label:
+      en_US: Agora App Certificate
+      zh_Hans: Agora App Certificate
+      pt_BR: Agora App Certificate
+    placeholder:
+      en_US: This value is only needed when you have turned on security token for your Agora project
+      zh_Hans: 只有在你开启了 Agora 安全Token时才需要填写
+      pt_BR: This value is only needed when you have turned on security token for your Agora project
+  - name: api_key
+    type: secret-input
+    required: false
+    label:
+      en_US: API key
+      zh_Hans: API key
+      pt_BR: API key
+    placeholder:
+      en_US: This is used to protect your API endpoint
+      zh_Hans: 这个值用于保护你的 API Endpoint
+      pt_BR: This is used to protect your API endpoint
+endpoints:
+  - endpoints/convoai.yaml
+  - endpoints/convoai_get.yaml
+  - endpoints/web.yaml

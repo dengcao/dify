@@ -1,0 +1,38 @@
+version: 0.0.5
+type: plugin
+author: joto
+name: datafocus
+label:
+  en_US: DataFocus
+  zh_Hans: DataFocus
+description:
+  en_US: Two plugins，One is the Hallucination controllable Text2SQL component，the other is the fast response ChatBI.
+  zh_Hans: 包含了一个幻觉可控的Text2SQL极速生成插件；以及一个可多轮问数的ChatBI插件。
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/datafocus.yaml
+meta:
+  version: 0.0.5
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-01-14T10:41:30.9355822+08:00
+privacy: https://www.datafocus.ai/user-registration-agreement
+verified: false

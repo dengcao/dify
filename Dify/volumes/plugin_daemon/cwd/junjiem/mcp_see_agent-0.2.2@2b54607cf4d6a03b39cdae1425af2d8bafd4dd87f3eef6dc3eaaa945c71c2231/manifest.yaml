@@ -1,0 +1,42 @@
+version: 0.2.2
+type: plugin
+author: junjiem
+name: mcp_see_agent
+label:
+  en_US: Agent Strategies (Support MCP Tools)
+  zh_Hans: Agent 策略（支持 MCP 工具）
+description:
+  en_US: Agent strategies collection that provide Function Calling and ReAct (Support MCP SSE / StreamableHTTP fetch and call tools).
+  zh_Hans: 提供 Function Calling 和 ReAct 的 Agent 策略集合（支持 MCP SSE / StreamableHTTP 发现和调用工具）。
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    storage:
+      enabled: true
+      size: 1073741824
+plugins:
+  agent_strategies:
+    - provider/agent.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-03-14T09:45:37.7926773+08:00
+privacy: PRIVACY.md
+verified: false

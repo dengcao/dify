@@ -1,0 +1,84 @@
+identity:
+  name: mcp_sse_ReAct
+  author: junjiem
+  label:
+    en_US: ReAct (Support MCP Tools)
+    zh_Hans: ReAct (支持 MCP 工具)
+description:
+  en_US: ReAct is a basic strategy for agent, model will use the Dify and MCP tools provided to perform the task.
+  zh_Hans: ReAct 是一个基本的 Agent 策略，模型将使用提供的 Dify 和 MCP 工具来执行任务。
+features:
+  - history-messages
+parameters:
+  - name: model
+    type: model-selector
+    scope: llm
+    required: true
+    label:
+      en_US: Model
+      zh_Hans: 模型
+  - name: tools
+    type: array[tools]
+    required: false
+    label:
+      en_US: Tool list
+      zh_Hans: 工具列表
+  - name: mcp_servers_config
+    type: string
+    required: true
+    label:
+      en_US: MCP Servers config
+      zh_Hans: MCP 服务配置
+    default: "{\n  \"server_name1\": {\n    \"transport\": \"sse\",\n    \"url\": \"http://127.0.0.1:8000/sse\"\n  },
+    \n  \"server_name2\": {\n    \"transport\": \"streamable_http\",\n    \"url\": \"http://127.0.0.1:8000/mcp\"\n  }\n}"
+    help:
+      en_US: "MCP Servers config, support multiple MCP Server."
+      zh_Hans: "MCP服务配置，支持多个MCP服务。"
+  - name: mcp_resources_as_tools
+    type: boolean
+    required: false
+    default: true
+    label:
+      en_US: MCP Resources as Tools
+      zh_Hans: MCP 资源作为工具
+    help:
+      en_US: "Fetch and call the preset MCP Resources as Tools."
+      zh_Hans: "将预设的 MCP Resources 作为 Tools 返回和调用。"
+  - name: mcp_prompts_as_tools
+    type: boolean
+    required: false
+    default: true
+    label:
+      en_US: MCP Prompts as Tools
+      zh_Hans: MCP 提示词作为工具
+    help:
+      en_US: "Fetch and call the preset MCP Prompts as Tools."
+      zh_Hans: "将预设的 MCP Prompts 作为 Tools 返回和调用。"
+  - name: instruction
+    type: string
+    required: false
+    label:
+      en_US: Instruction
+      zh_Hans: 指令
+    auto_generate:
+      type: prompt_instruction
+    template:
+      enabled: true
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query
+      zh_Hans: 查询
+  - name: maximum_iterations
+    type: number
+    required: true
+    label:
+      en_US: Maximum Iterations
+      zh_Hans: 最大迭代次数
+    default: 5
+    min: 1
+    max: 30
+extra:
+  python:
+    source: strategies/ReAct.py

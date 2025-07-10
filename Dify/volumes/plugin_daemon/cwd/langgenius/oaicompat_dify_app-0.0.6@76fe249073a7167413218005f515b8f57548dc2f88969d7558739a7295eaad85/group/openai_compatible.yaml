@@ -1,0 +1,56 @@
+settings:
+  - name: api_key
+    type: secret-input
+    required: true
+    label:
+      en_US: API key
+      zh_Hans: API key
+      pt_BR: API key
+      ja_JP: API key
+    placeholder:
+      en_US: Please input your API key
+      zh_Hans: 请输入你的 API key
+      pt_BR: Please input your API key
+      ja_JP: API keyを入力してください
+  - name: app_id
+    type: app-selector
+    scope: chat
+    required: true
+    label:
+      en_US: App
+      zh_Hans: App
+      pt_BR: App
+      ja_JP: App
+    placeholder:
+      en_US: Please select an app
+      zh_Hans: 请选择一个应用
+      pt_BR: Please select an app
+      ja_JP: アプリを選択してください
+  - name: memory_mode
+    type: select
+    required: true
+    label:
+      en_US: Memory Mode
+      zh_Hans: 记忆模式
+      pt_BR: Modo de Memória
+      ja_JP: メモリーモード
+    placeholder:
+      en_US: Please select a memory mode, it will decide how the Endpoint manage the context
+      zh_Hans: 请选择一个上下文模式，它将决定该 Endpoint 使用哪种方式管理上下文
+      pt_BR: Por favor, selecione um modo de memória, que decidirá como o Endpoint gerencia o contexto
+      ja_JP: メモリーモードを選択してください, それは Endpoint がコンテキストをどのように管理するかを決定します
+    options:
+      - label:
+          en_US: Last User Message
+          zh_Hans: 使用最后一条用户消息
+          pt_BR: Última Mensagem do Usuário
+          ja_JP: 最後のユーザーメッセージ
+        value: last_user_message
+      - label:
+          en_US: All Messages
+          zh_Hans: 使用所有消息
+          pt_BR: Todas as Mensagens
+          ja_JP: 全てのメッセージ
+        value: all_messages
+endpoints:
+  - endpoints/openai_compatible.yaml

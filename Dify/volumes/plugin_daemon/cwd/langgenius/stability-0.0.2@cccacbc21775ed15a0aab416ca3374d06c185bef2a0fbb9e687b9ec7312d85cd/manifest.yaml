@@ -1,0 +1,36 @@
+author: langgenius
+created_at: '2024-09-20T08:03:44.658609186Z'
+description:
+  en_US: Activating humanity's potential through generative AI
+  pt_BR: Activating humanity's potential through generative AI
+  zh_Hans: 通过生成式 AI 激活人类的潜力
+icon: icon.svg
+label:
+  en_US: Stability
+  pt_BR: Stability
+  zh_Hans: Stability
+meta:
+  arch:
+  - amd64
+  - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+name: stability
+plugins:
+  tools:
+  - provider/stability.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+- image
+type: plugin
+version: 0.0.2

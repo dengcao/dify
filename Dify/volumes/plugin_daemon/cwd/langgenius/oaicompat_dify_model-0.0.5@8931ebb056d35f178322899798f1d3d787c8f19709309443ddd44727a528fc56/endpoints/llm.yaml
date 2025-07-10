@@ -1,0 +1,6 @@
+path: "/v1/chat/completions"
+method: "POST"
+extra:
+  python:
+    source: "endpoints/llm.py"
+

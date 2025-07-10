@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <!-- 圆形背景 -->
+    <circle cx="64" cy="64" r="50"
+            fill="none" 
+            stroke="#FF0099" 
+            stroke-width="3"/>
+
+    <!-- 字母 M -->
+    <path d="M44,84 L44,44 L64,64 L84,44 L84,84" 
+          fill="none"
+          stroke="#FF0099"
+          stroke-width="9"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+</svg>

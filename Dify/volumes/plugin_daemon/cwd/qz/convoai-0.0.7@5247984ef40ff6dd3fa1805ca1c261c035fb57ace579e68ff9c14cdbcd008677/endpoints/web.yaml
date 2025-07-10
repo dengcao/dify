@@ -1,0 +1,5 @@
+path: "/convoai-web/<file>"
+method: "GET"
+extra:
+  python:
+    source: "endpoints/web.py"

@@ -1,0 +1,5 @@
+path: "/v1/embeddings"
+method: "POST"
+extra:
+  python:
+    source: "endpoints/text_embedding.py"

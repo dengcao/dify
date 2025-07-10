@@ -1,0 +1,36 @@
+version: 0.0.5
+type: plugin
+author: yevanchen
+name: exa
+label:
+  en_US: exa
+  ja_JP: exa
+  zh_Hans: exa
+  pt_BR: exa
+description:
+  en_US: Search designed for AI Business-grade search and crawling for any web data
+  ja_JP: Search designed for AI Business-grade search and crawling for any web data
+  zh_Hans: Search designed for AI Business-grade search and crawling for any web data
+  pt_BR: Search designed for AI Business-grade search and crawling for any web data
+icon: exa.jpg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/exa.yaml
+tags:
+- search
+- productivity
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-03-20T17:36:39.665072+08:00
+privacy: PRIVACY.md
+verified: false

@@ -1,0 +1,58 @@
+identity:
+  name: enhancing_function_agent
+  author: allenyzx
+  label:
+    en_US: EnhanceFunctionCalling
+    zh_Hans: EnhanceFunctionCalling
+description:
+  en_US:  Function Calling strategy for agent, Refer to a part of the thinking in `EASYTOOL-Enhancing LLM-based Agents with Concise Tool Instruction`.
+  zh_Hans: Function Calling Agent策略，一部分思路参考 `EASYTOOL-Enhancing LLM-based Agents with Concise Tool Instruction`，能有效提升用户拆解后工具调用效率。
+features:
+  - history-messages
+parameters:
+  - name: model
+    type: model-selector
+    scope: tool-call&llm
+    required: true
+    label:
+      en_US: Model
+      zh_Hans: 模型
+      pt_BR: Model
+  - name: tools
+    type: array[tools]
+    required: true
+    label:
+      en_US: Tool list
+      zh_Hans: 工具列表
+      pt_BR: Tool list
+  - name: instruction
+    type: string
+    required: true
+    label:
+      en_US: Instruction
+      zh_Hans: 指令
+      pt_BR: Instruction
+    auto_generate:
+      type: prompt_instruction
+    template:
+      enabled: true
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query
+      zh_Hans: 查询
+      pt_BR: Query
+  - name: maximum_iterations
+    type: number
+    required: true
+    label:
+      en_US: Maximum Iterations
+      zh_Hans: 最大迭代次数
+      pt_BR: Maximum Iterations
+    default: 3
+    max: 30
+    min: 1
+extra:
+  python:
+    source: strategies/enhancing_function_agent.py

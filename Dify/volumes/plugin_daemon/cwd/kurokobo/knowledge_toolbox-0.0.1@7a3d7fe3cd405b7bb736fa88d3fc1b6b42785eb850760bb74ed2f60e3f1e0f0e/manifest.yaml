@@ -1,0 +1,31 @@
+version: 0.0.1
+type: plugin
+author: kurokobo
+name: knowledge_toolbox
+label:
+  en_US: Knowledge Toolbox
+description:
+  en_US: Small tools for working with Dify Knowledge API.
+  ja_JP: Dify のナレッジ API を操作する小さなツール集。
+  zh_Hans: 用于操作 Dify Knowledge API 的小工具集。
+  pt_BR: Pequenas ferramentas para trabalhar com a Dify Knowledge API.
+icon: icon.svg
+resource:
+  memory: 268435456
+plugins:
+  tools:
+    - provider/knowledge_toolbox.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-07-09T00:00:00.000000000Z
+privacy: PRIVACY.md
+repo: https://github.com/kurokobo/dify-plugin-collection
+verified: false

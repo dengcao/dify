@@ -1,0 +1,40 @@
+settings:
+  - name: api_key
+    type: secret-input
+    required: true
+    label:
+      en_US: API key
+      zh_Hans: API key
+      pt_BR: API key
+    placeholder:
+      en_US: Please input your API key
+      zh_Hans: 请输入你的 API key
+      pt_BR: Please input your API key
+  - name: llm
+    type: model-selector
+    scope: llm
+    required: false
+    label:
+      en_US: LLM
+      zh_Hans: LLM
+      pt_BR: LLM
+    placeholder:
+      en_US: Please select a LLM
+      zh_Hans: 请选择一个 LLM
+      pt_BR: Please select a LLM
+  - name: text_embedding
+    type: model-selector
+    scope: text-embedding
+    required: false
+    label:
+      en_US: Text Embedding
+      zh_Hans: 文本嵌入
+      pt_BR: Text Embedding
+    placeholder:
+      en_US: Please select a Text Embedding Model
+      zh_Hans: 请选择一个文本嵌入模型
+      pt_BR: Please select a Text Embedding Model
+endpoints:
+  - endpoints/llm.yaml
+  - endpoints/text_embedding.yaml
+

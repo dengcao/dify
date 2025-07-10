@@ -1,0 +1,13 @@
+identity:
+  author: allenyzx
+  name: enhancing_function_agent
+  label:
+    en_US: Enhancing Agent
+  description:
+    en_US: Enhancing Agent
+  icon: icon.png
+strategies:
+  - strategies/enhancing_function_agent.yaml
+extra:
+  python:
+    source: provider/enhancing_function_agent.py

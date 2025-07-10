@@ -1,0 +1,90 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- 六边形背景 -->
+  <polygon points="64,14 110,39 110,89 64,114 18,89 18,39" 
+           fill="none" 
+           stroke="#FF0099" 
+           stroke-width="3">
+    <animate attributeName="stroke-dasharray"
+             values="0,1000;300,0"
+             dur="3s"
+             repeatCount="indefinite"/>
+  </polygon>
+  
+  <!-- 中央连接点 -->
+  <circle cx="64" cy="64" r="25" 
+          fill="none" 
+          stroke="#FF0099" 
+          stroke-width="3">
+    <animate attributeName="r"
+             values="23;27;23"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 连接线 -->
+  <path d="M64 30 L64 98" 
+        stroke="#FF0099" 
+        stroke-width="2" 
+        stroke-dasharray="4,4">
+    <animate attributeName="stroke-dashoffset"
+             values="0;100"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </path>
+  <path d="M30 64 L98 64" 
+        stroke="#FF0099" 
+        stroke-width="2" 
+        stroke-dasharray="4,4">
+    <animate attributeName="stroke-dashoffset"
+             values="0;100"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- 数据流动效果 -->
+  <circle cx="64" cy="64" r="15" 
+          fill="#FF0099" 
+          opacity="0.2">
+    <animate attributeName="opacity"
+             values="0.1;0.3;0.1"
+             dur="1.5s"
+             repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 四个端点 -->
+  <circle cx="64" cy="30" r="5" fill="#FF0099">
+    <animate attributeName="r"
+             values="4;6;4"
+             dur="1s"
+             repeatCount="indefinite"/>
+  </circle>
+  <circle cx="64" cy="98" r="5" fill="#FF0099">
+    <animate attributeName="r"
+             values="4;6;4"
+             dur="1s"
+             repeatCount="indefinite"
+             begin="0.25s"/>
+  </circle>
+  <circle cx="30" cy="64" r="5" fill="#FF0099">
+    <animate attributeName="r"
+             values="4;6;4"
+             dur="1s"
+             repeatCount="indefinite"
+             begin="0.5s"/>
+  </circle>
+  <circle cx="98" cy="64" r="5" fill="#FF0099">
+    <animate attributeName="r"
+             values="4;6;4"
+             dur="1s"
+             repeatCount="indefinite"
+             begin="0.75s"/>
+  </circle>
+  
+  <!-- 中心点 -->
+  <circle cx="64" cy="64" r="8" fill="#FF0099">
+    <animate attributeName="opacity"
+             values="0.7;1;0.7"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
+</svg>

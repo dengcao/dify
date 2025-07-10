@@ -1,0 +1,33 @@
+version: 0.0.1
+type: plugin
+author: leslie2046
+name: moderation
+label:
+  en_US: Moderation
+  zh_Hans: 敏感内容审查
+description:
+  en_US: You can use this extension plugin to implement an API extension for content moderation, and you can customize keyword lists and separators, as well as strategies for keyword flagged.
+  zh_Hans: 你可以使用这个扩展插件来实现一个敏感内容审查的API扩展，并且你可以自定义关键词列表和分隔符，以及关键词命中后的策略。
+icon: icon.png
+resource:
+  memory: 268435456
+  permission:
+    endpoint:
+      enabled: true
+plugins:
+  endpoints:
+    - group/moderation.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 0.3.0
+created_at: 2025-06-27T12:30:58.3885532+08:00
+privacy: PRIVACY.md
+repo: https://github.com/leslie2046/moderation_plugin
+verified: false

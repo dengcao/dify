@@ -1,0 +1,37 @@
+author: langgenius
+created_at: '2024-09-20T08:03:44.658609186Z'
+description:
+  en_US: YouTube
+  pt_BR: YouTube é o maior site de compartilhamento de vídeos do mundo, onde os usuários
+    podem fazer upload, assistir e compartilhar vídeos.
+  zh_Hans: YouTube（油管）是全球最大的视频分享网站，用户可以在上面上传、观看和分享视频。
+icon: icon.svg
+label:
+  en_US: YouTube
+  pt_BR: YouTube
+  zh_Hans: YouTube
+meta:
+  arch:
+  - amd64
+  - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+name: youtube
+plugins:
+  tools:
+  - provider/youtube.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+- videos
+type: plugin
+version: 0.0.2

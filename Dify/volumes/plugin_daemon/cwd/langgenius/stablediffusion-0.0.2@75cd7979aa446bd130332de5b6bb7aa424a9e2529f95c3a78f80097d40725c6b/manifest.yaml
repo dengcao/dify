@@ -1,0 +1,36 @@
+author: langgenius
+created_at: '2024-09-20T08:03:44.658609186Z'
+description:
+  en_US: Stable Diffusion is a tool for generating images which can be deployed locally.
+  pt_BR: Stable Diffusion is a tool for generating images which can be deployed locally.
+  zh_Hans: Stable Diffusion 是一个可以在本地部署的图片生成的工具。
+icon: icon.png
+label:
+  en_US: Stable Diffusion
+  pt_BR: Stable Diffusion
+  zh_Hans: Stable Diffusion
+meta:
+  arch:
+  - amd64
+  - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+name: stablediffusion
+plugins:
+  tools:
+  - provider/stablediffusion.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+- image
+type: plugin
+version: 0.0.2

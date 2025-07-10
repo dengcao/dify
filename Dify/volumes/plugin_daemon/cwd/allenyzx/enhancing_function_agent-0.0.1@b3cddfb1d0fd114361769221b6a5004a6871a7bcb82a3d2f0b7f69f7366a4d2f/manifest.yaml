@@ -1,0 +1,39 @@
+version: 0.0.1
+type: plugin
+author: allenyzx
+name: enhancing_function_agent
+label:
+  en_US: Enhancing Agent
+  zh_Hans: Enhancing Agent
+description:
+  en_US: Based on the official Function-Calling Agent, the microsoft of EASYTOOL policy is used to enhance the ability to disassemble and reflect on LLM tasks.
+  zh_Hans: 基于Dify官方Function-Calling Agent，采用微软的EASYTOOL策略增强LLM任务拆解、反思等能力。
+icon: icon.png
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+plugins:
+  agent_strategies:
+    - provider/enhancing_function_agent.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-06-30T17:42:40.996266+08:00
+privacy: PRIVACY.md
+verified: false
