@@ -22,13 +22,18 @@ Dify v1.5.1
 
 ### Docker安装方法（内网离线安装）
 
- **1、下载整个Dify离线安装包项目到本地：** git clone https://github.com/dengcao/dify.git
-
- **2、将./Docker-image/目录下全部镜像文件（.tar）导入到docker。
+ **1、下载整个Dify离线安装包项目到本地：** 
  
- 其中，文件“dify-plugin-daemon-0.1.3-local-20250710.7z”需要先解压，得到文件“dify-plugin-daemon-0.1.3-local-20250710.tar”。
+ ```
+ git clone https://github.com/dengcao/dify.git
+ ```
+ **2、解压“Dify_1.5.1.part1.rar”文件，得到目录：./dify/（内含部署文件）** 
  
- 导入到docker的具体代码如下：** 
+ **3、将./Docker-image/目录下全部镜像文件（.tar）导入到docker。** 
+ 
+ **其中，文件“dify-plugin-daemon-0.1.3-local-20250710.7z”需要先解压，得到文件“dify-plugin-daemon-0.1.3-local-20250710.tar”。** 
+ 
+ **导入到docker的具体代码如下：** 
 
 ```
 cd ./Docker-image/
@@ -42,7 +47,7 @@ docker load -i redis_6-alpine.tar
 docker load -i squid.tar
 ```
 
- **3、创建容器，执行命令：** 
+ **4、创建容器，执行命令：** 
 
 ```
 cd ./dify/
@@ -51,11 +56,17 @@ docker compose up -d
 
 ### Docker安装方法（联网安装）
 
- **1、下载整个Dify离线安装包项目到本地：** git clone https://github.com/dengcao/dify.git
- 
- 注意：联网安装时，可以不下载镜像包。docker镜像包目录：./Docker-image/
+ **1、下载整个Dify离线安装包项目到本地：** 
+  
+ ```
+ git clone https://github.com/dengcao/dify.git
+ ```
 
- **2、执行命令：** 
+ **注意：**联网安装时，可以不下载docker镜像包，即目录：./Docker-image/。仅下载“Dify_1.5.1.part1.rar”和“Dify_1.5.1.part2.rar”等文件即可。
+ 
+ **2、解压“Dify_1.5.1.part1.rar”文件，得到目录：./dify/（内含部署文件）** 
+
+ **3、执行命令：** 
 
 ```
 cd ./dify/
