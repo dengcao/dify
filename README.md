@@ -24,7 +24,11 @@ Dify v1.5.1
 
  **1、下载整个Dify离线安装包项目到本地：** git clone https://github.com/dengcao/dify.git
 
- **2、将./Docker-image/目录下全部镜像文件（.tar）导入到docker。具体代码如下：** 
+ **2、将./Docker-image/目录下全部镜像文件（.tar）导入到docker。
+ 
+ 其中，文件“dify-plugin-daemon-0.1.3-local-20250710.7z”需要先解压，得到文件“dify-plugin-daemon-0.1.3-local-20250710.tar”。
+ 
+ 导入到docker的具体代码如下：** 
 
 ```
 cd ./Docker-image/
