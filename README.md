@@ -6,7 +6,7 @@ Dify是一个开源的LLM应用开发平台。其直观的界面结合了AI工�
 
 ### 对应Dify版本
 
-Dify v1.5.1
+Dify v1.6.0
 
 ### Dify离线安装包仓库
 
@@ -27,7 +27,7 @@ Dify v1.5.1
  ```
  git clone https://github.com/dengcao/dify.git
  ```
- **2、解压“Dify_1.5.1.part1.rar”文件，得到目录：./dify/（内含部署文件）** 
+ **2、解压“Dify_1.6.0.part1.rar”文件，得到目录：./dify/（内含部署文件）** 
  
  **3、将./Docker-image/目录下全部镜像文件（.tar）导入到docker。** 
  
@@ -37,10 +37,10 @@ Dify v1.5.1
 
 ```
 cd ./Docker-image/
-docker load -i dify-api_1.5.1.tar
+docker load -i dify-api_1.6.0.tar
 docker load -i dify-plugin-daemon-0.1.3-local-20250710.tar
 docker load -i dify-sandbox_0.2.12.tar
-docker load -i dify-web_1.5.1.tar
+docker load -i dify-web_1.6.0.tar
 docker load -i nginx.tar
 docker load -i postgres_15-alpine.tar
 docker load -i redis_6-alpine.tar
@@ -62,9 +62,9 @@ docker compose up -d
  git clone https://github.com/dengcao/dify.git
  ```
 
- **注意：**联网安装时，可以不下载docker镜像包，即目录：./Docker-image/。仅下载“Dify_1.5.1.part1.rar”和“Dify_1.5.1.part2.rar”等文件即可。
+ **注意：**联网安装时，可以不下载docker镜像包（即目录：./Docker-image/），仅下载“Dify_1.6.0.part1.rar”和“Dify_1.6.0.part2.rar”等文件即可。
  
- **2、解压“Dify_1.5.1.part1.rar”文件，得到目录：./dify/（内含部署文件）** 
+ **2、解压“Dify_1.6.0.part1.rar”文件，得到目录：./dify/（内含部署文件）** 
 
  **3、执行命令：** 
 
